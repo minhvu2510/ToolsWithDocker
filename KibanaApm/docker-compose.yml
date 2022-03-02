@@ -44,6 +44,7 @@ services:
          -E apm-server.kibana.enabled=true
          -E apm-server.kibana.host=kibana:5601
          -E output.elasticsearch.hosts=["elasticsearch:9200"]
+         -E ELASTIC_APM_SERVER_URL=http://0.0.0.0:8200
     networks:
      - elastic
     healthcheck:
